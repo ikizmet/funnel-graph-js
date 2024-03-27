@@ -4,5 +4,7 @@ updates:
     directory: "/**"
     schedule:
       interval: "daily"
-    ignore:
-      - dependency-type: "development"
+    allow:
+      - dependency-type: "production"
+      - dependency-name: "*"
+        ignore: true
