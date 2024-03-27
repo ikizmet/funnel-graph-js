@@ -6,3 +6,6 @@ updates:
       interval: "daily"
     allow:
       - dependency-type: "production"
+    ignore:
+      - dependency-name: "*"
+        dependency-type: "development"
