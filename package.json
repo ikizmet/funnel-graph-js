@@ -26,9 +26,9 @@
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.3",
-    "mocha": "^5.2.0"
+    "mocha": "^10.4.0"
   },
   "resolutions": {
     "minimist": "1.2.6"
-}
+  }
 }
