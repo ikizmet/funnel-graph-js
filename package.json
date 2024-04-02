@@ -27,5 +27,8 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.3",
     "mocha": "^5.2.0"
-  }
+  },
+  "resolutions": {
+    "minimist": "1.2.6"
+}
 }
