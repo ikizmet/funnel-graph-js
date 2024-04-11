@@ -1,16 +1,16 @@
 {
   "name": "ikizmet-funnel-graph-js",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "SVG Funnel Graph Javascript Library",
   "main": "main.js",
   "scripts": {
     "test": "nyc mocha --compilers js:babel-core/register"
   },
-  "author": "Greg Hovanesyan",
+  "author": "ikizmet",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/greghub/funnel-graph-js.git"
+    "url": "https://github.com/ikizmet/funnel-graph-js"
   },
   "keywords": [
     "funnel",
