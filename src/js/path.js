@@ -25,10 +25,6 @@ const createVerticalCurves = (x1, y1, x2, y2) =>
  */
 
 const createPath = (index, X, Y, YNext) => {
-	const max = Math.max(...Y);
-
-	if (max === 0) return '';
-
 	let str = `M${X[0]},${Y[0]}`;
 
 	for (let i = 0; i < X.length - 1; i++) {

@@ -556,8 +556,16 @@ class FunnelGraph {
 	drawPaths() {
 		const svg = this.getSVG();
 		const paths = svg.querySelectorAll('path');
-		const definitions = this.getPathDefinitions();
 
+    const totalValues = this.getValues2d();
+    const max = Math.max(...totalValues);
+
+    if(max === 0) {
+      return
+    }
+
+		const definitions = this.getPathDefinitions();
+    
 		definitions.forEach((definition, index) => {
 			paths[index].setAttribute('d', definition);
 		});

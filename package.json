@@ -1,6 +1,6 @@
 {
   "name": "ikizmet-funnel-graph-js",
-  "version": "1.4.7",
+  "version": "1.4.8",
   "description": "SVG Funnel Graph Javascript Library",
   "main": "main.js",
   "scripts": {
