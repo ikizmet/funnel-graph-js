@@ -265,11 +265,14 @@ class FunnelGraph {
 				const twoDimPercentages = this.getPercentages2d();
 
 				this.subLabels.forEach((subLabel, j) => {
+					const segmentValue = formatNumber(this.values[index][j]);
+
 					const subLabelDisplayValue =
 						this.subLabelValue === 'percent'
-							? `${twoDimPercentages[index][j]}%`
-							: formatNumber(this.values[index][j]);
-					percentageList += `<li class="${this.getSubLabelVisibility(j) && 'hide'}">${this.subLabels[j]}:
+							? `${twoDimPercentages[index][j]}% (${segmentValue})`
+							: segmentValue;
+
+					percentageList += `<li class="${this.getSubLabelVisibility(j) ? 'hide' : ''}">${this.subLabels[j]}:
     <span class="percentage__list-label">${
 		this.breakdownRawData !== undefined
 			? `<a target='_blank' href="${this.breakdownRawData[j]}">${subLabelDisplayValue}</a>`
@@ -557,15 +560,15 @@ class FunnelGraph {
 		const svg = this.getSVG();
 		const paths = svg.querySelectorAll('path');
 
-    const totalValues = this.getValues2d();
-    const max = Math.max(...totalValues);
+		const totalValues = this.getValues2d();
+		const max = Math.max(...totalValues);
 
-    if(max === 0) {
-      return
-    }
+		if (max === 0) {
+			return;
+		}
 
 		const definitions = this.getPathDefinitions();
-    
+
 		definitions.forEach((definition, index) => {
 			paths[index].setAttribute('d', definition);
 		});
